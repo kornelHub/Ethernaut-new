@@ -34,7 +34,7 @@ contract AttackDex is ERC20 {
         _mint(address(this), 10);
         _mint(address(dex), 100);
         attackToken(token1);
-        this.transfer(address(dex), 10); // that will set up initial values to ensure calculation are good. this contract will have 10 DEX: 100
+        this.transfer(address(dex), 10); // that will set up initial values to ensure calculation are good. this contract will have 10, DEX: 100
         attackToken(token2);
     }
 
@@ -55,3 +55,4 @@ Later we need to add approve to DexHack to spend token1 and token2 supply on our
 ```
 await contract.approve('DEX_HACK', '10000000000000000000')
 ```
+And execute attack() on DexHack contract
